@@ -13,8 +13,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 let db = new Client({
-  // connectionString: DB_URI,
-  // password:process.env.DB_PASSWORD
+  
   host:"/var/run/postgresql",
   database:DB_URI
 });
