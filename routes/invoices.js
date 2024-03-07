@@ -9,7 +9,7 @@ router.get('/', async (req, res, next) => {
     FROM invoices
     ORDER BY id
     `);
-    return res.json({ invoices: results.rows });
+    return res.json({ invoices: results.rows },200);
   } catch (e) {
     return next(e);
   }
