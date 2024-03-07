@@ -46,7 +46,7 @@ router.get('/:code', async (req, res, next) => {
     // Construct and send the response object
     return res.json({
       company: {
-        code: company.code,
+
         name: company.name,
         description: company.description,
         invoices: invoiceIds,
@@ -83,6 +83,7 @@ router.put('/:code', async (req, res, next) => {
     }
     return res.send({ company: results.rows[0] });
   } catch (e) {
+    return next(e)
 
   }
 });

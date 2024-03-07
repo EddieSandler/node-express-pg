@@ -22,7 +22,7 @@ router.get('/:id', async (req, res, next) => {
     if (results.rows.length === 0) {
       throw new ExpressError(`Can't find invoice  with id of ${id}, 404`);
     }
-    return res.send({ code: results.rows[0] });
+    return res.send({ company:results.rows[0] });
   } catch (e) {
     return next(e);
   }
